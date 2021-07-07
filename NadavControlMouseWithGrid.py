@@ -50,8 +50,8 @@ mp_drwaing = mp.solutions.drawing_utils #drawing uility - Help to render the lan
 mp_hands = mp.solutions.hands
 
 cap = cv2.VideoCapture(0)
-cap.set(3,640)
-cap.set(4,480) 
+cap.set(3,1280)
+cap.set(4,720) 
 
 finger5Y=0
 finger8Y=0
@@ -139,7 +139,7 @@ with mp_hands.Hands(min_detection_confidence=0.8, min_tracking_confidence=0.5, m
 
         image = cv2.cvtColor(image,cv2.COLOR_RGB2BGR)
         cv2.imshow('image',image)
-        cv2.moveWindow('image',900,0)
+        #cv2.moveWindow('image',900,0)
 
         if cv2.waitKey(10) & 0xFF == ord('q'):
             break
